@@ -1,0 +1,232 @@
+/* ---------- ESTILOS MODERNOS Y SIMPLES ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FEF9E6; /* Color Crema */
+  color: #2D2B2A;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---------- ENCABEZADO ---------- */
+.header-principal {
+  background: linear-gradient(135deg, #C4492C, #9e361e);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  border-bottom: 6px solid #F4A261;
+}
+
+.header-principal h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* ---------- NAVEGACIÓN ---------- */
+.navbar {
+  background-color: #2D2B2A;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #F4A261;
+  color: #2D2B2A;
+}
+
+/* ---------- SECCIONES ---------- */
+.section-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 30px 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: #C4492C;
+  margin-bottom: 20px;
+  border-left: 5px solid #F4A261;
+  padding-left: 15px;
+}
+
+/* Diseño de Cuadrícula (Flexbox) para Productos y Recetas en línea */
+.grid-items {
+  display: flex;
+  flex-wrap: nowrap; /* Evita que los items se bajen a la siguiente línea */
+  gap: 25px;
+  margin-top: 20px;
+  overflow-x: auto; /* Permite scroll si la pantalla es muy pequeña */
+  padding-bottom: 10px;
+}
+
+/* Estilo para que el scroll se vea más limpio */
+.grid-items::-webkit-scrollbar {
+  height: 8px;
+}
+.grid-items::-webkit-scrollbar-thumb {
+  background: #F4A261;
+  border-radius: 10px;
+}
+
+.item-card {
+  background-color: #FEF9E6;
+  border: 1px solid #F4A261;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+  min-width: 250px; /* Tamaño mínimo para que no se aplasten */
+  flex: 1; /* Todos crecen por igual */
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.item-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #C4492C;
+  font-size: 1.2rem;
+}
+
+/* ---------- BOTONES ---------- */
+.btn-primary {
+  background-color: #C4492C;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #9e361e;
+}
+
+/* ---------- IMAGEN DESTACADA ---------- */
+.featured-image img {
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ---------- MODAL ---------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.btn-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #C4492C;
+}
+
+.modal-img-large {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.instrucciones-texto {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  white-space: pre-line;
+}
+
+/* ---------- PIE DE PÁGINA ---------- */
+.footer {
+  background-color: #2D2B2A;
+  color: #FEF9E6; /* Color Crema suave como en la imagen */
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #F4A261; /* Naranja vibrante para los enlaces */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- CELULARES ---------- */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
